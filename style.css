@@ -4,7 +4,7 @@
 body {
   margin: 0;
   padding: 0;
-  overflow: auto;
+  
 }
 ul.fa-ul{
   margin-left: 0;
@@ -15,10 +15,6 @@ ul.fa-ul{
 .icones{
 color: #6B89AB;
 font-size: 48px;
-}
-
-::-webkit-scrollbar{
-background: transparent;
 }
 .cabecalhos{
   background-color: #f9f9f9;
@@ -245,35 +241,7 @@ font-family: 'Montserrat', sans-serif;;
   
 }
 
-@media (max-width: 390px){
-  footer{
-    display: block;
-  }
-  .localizacao{
-    display: block;
-  }
-  .fale-esq{
-    margin-right: 0;
-  }
-  .titulo-cv{
-    text-align: center;
-    align-self: center;
-    align-content: center;
-  }
-  .coluna-02{
-    max-width: 90%;
-    align-self: center;
-    justify-content: center;
-    text-align: center;
 
-
-  }
-  .conteudo-cv{
-    text-align: center;
-    align-items: center;
-  }
-
-}
 
 
 .profile-photo{        
@@ -327,31 +295,76 @@ font-family: 'Montserrat', sans-serif;;
 }
 .localizacao{
   padding: 15px;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
 }
 .fale-esq{
-  display: block;
-  justify-content: left !important;
-  margin-right: 60px;
+  justify-content: left;
 }
 .localizacao ul{
   list-style-type: none;
   padding: 0;
   font-weight: 500;
 }
+.localizacao ul li{
+  margin-bottom: 1.5rem;
+}
+.localizacao ul li:first-child{
+  margin-top: 1.5rem;
+}
+.map-wrapper{
+  display: flex;
+  justify-content: center;
+}
+.mapa{
+  padding: 1%;
+  box-shadow: 2px 2px 25px rgba(0, 0, 0, 0.25);
+}
 footer{
   padding: 10px;
   background-color: darkcyan;
   text-align: center;
   color: white;
-  display: flex;
-  gap: 20px;
-  justify-content: center;
   font-size: 0.85rem;
 }
 footer a:visited{
   text-decoration: none;
   color: #fcb741;
+}
+/*MEDIA QUERY*/
+@media (max-width: 390px){
+  .localizacao{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+  .titulo-cv{
+    text-align: center;
+    align-self: center;
+    align-content: center;
+  }
+  .coluna-02{
+    max-width: 90%;
+    align-self: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .conteudo-cv{
+    text-align: center;
+    align-items: center;
+  }
+
+}
+@media (min-width: 1024px){
+  .localizacao{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 25px;
+    justify-content: space-around;
+  }
+  .localizacao h1{
+    text-align: left;
+  }
+  .mapa{
+    width:80%;
+  }
 }
